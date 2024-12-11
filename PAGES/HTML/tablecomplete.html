@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Table Features</title>
+</head>
+<body>
+<h1>HTML Table Features</h1>
+
+<!-- Simple Table with Caption -->
+<table border="4">
+  <caption>Simple Table Example</caption>
+  <thead>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+    <th>Header 3</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Row 1, Col 1</td>
+    <td>Row 1, Col 2</td>
+    <td>Row 1, Col 3</td>
+  </tr>
+  <tr>
+    <td>Row 2, Col 1</td>
+    <td>Row 2, Col 2</td>
+    <td>Row 2, Col 3</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="3">Footer Row (spanning all columns)</td>
+  </tr>
+  </tfoot>
+</table>
+
+<!-- Table with Rowspan and Colspan -->
+<table border="1">
+
+  <caption>Table with Rowspan and Colspan</caption>
+  <br>
+  <thead>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+    <th>Header 3</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan="2">Rowspan Cell</td>
+    <td>Row 1, Col 2</td>
+    <td>Row 1, Col 3</td>
+  </tr>
+  <tr>
+    <td>Row 2, Col 2</td>
+    <td>Row 2, Col 3</td>
+  </tr>
+  <tr>
+    <td>Row 3, Col 1</td>
+    <td colspan="2">Colspan Cell</td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Table with Nested Table -->
+<table border="1">
+
+  <caption>Table with Nested Table</caption>
+  <br>
+  <thead>
+  <tr>
+    <th>Main Header 1</th>
+    <th>Main Header 2</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Row 1, Col 1</td>
+    <td>
+      <table border="1">
+        <thead>
+        <tr>
+          <th>Nested Header 1</th>
+          <th>Nested Header 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Nested Row 1, Col 1</td>
+          <td>Nested Row 1, Col 2</td>
+        </tr>
+        <tr>
+          <td>Nested Row 2, Col 1</td>
+          <td>Nested Row 2, Col 2</td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

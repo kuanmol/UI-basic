@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using class, id, and div</title>
+    <style>
+        /* Class to style multiple elements the same way */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* ID for unique styling */
+        #header {
+            color: blue;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* Div with class for layout grouping */
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* ID used to highlight specific div */
+        #footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ID for unique element (header) -->
+<h1 id="header">Welcome to My Web Page</h1>
+
+<!-- Using Div to group related content -->
+<div class="container">
+    <h2>Introduction</h2>
+    <p>This paragraph uses a class to apply a yellow background and bold text.</p>
+    <p class="highlight">This text has the "highlight" class applied.</p>
+</div>
+
+<!-- Div with class to create a container for grouping -->
+<div class="container">
+    <h2>Details</h2>
+    <p>This paragraph uses the same class to style text similarly as the one above.</p>
+    <p class="highlight">This is another example of the "highlight" class.</p>
+</div>
+
+<!-- ID for unique footer -->
+<div id="footer">
+    <p>This is a footer section styled with a unique "id".</p>
+</div>
+
+<!-- Reusing the "highlight" class for other paragraphs -->
+<p class="highlight">This is another paragraph with the highlight class.</p>
+
+</body>
+</html>

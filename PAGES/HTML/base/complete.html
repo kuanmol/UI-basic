@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML Features Showcase">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="HTML, Examples, Features">
+    <title>HTML Feature Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            padding: 1em;
+            margin: 1em 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: #333;
+            color: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.5em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>HTML Feature Showcase</h1>
+</header>
+
+<section id="text">
+    <h2>Text Elements</h2>
+    <p>This is a <strong>paragraph</strong>. HTML supports <em>italic</em>, <u>underline</u>,
+        <mark>highlight</mark>
+        , and <s>strikethrough</s> text.
+    </p>
+    <blockquote>This is a blockquote.</blockquote>
+    <pre>
+This is preformatted text.
+        </pre>
+    <code>&lt;p&gt;This is code inside a paragraph&lt;/p&gt;</code>
+</section>
+
+<section id="links-images">
+    <h2>Links and Images</h2>
+    <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+    <br>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+</section>
+
+<section id="lists">
+    <h2>Lists</h2>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+    <h3>Definition List</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+</section>
+
+<section id="tables">
+    <h2>Tables</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="forms">
+    <h2>Forms</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <br>
+        <label for="color">Choose a color:</label>
+        <input type="color" id="color" name="color">
+        <br>
+        <label for="file">Upload a file:</label>
+        <input type="file" id="file" name="file">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<section id="media">
+    <h2>Media</h2>
+    <h3>Audio</h3>
+    <audio controls>
+        <source src="example-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <h3>Video</h3>
+    <video controls width="320" height="240">
+        <source src="example-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+</section>
+
+<section id="canvas">
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 200, 100);
+    </script>
+</section>
+
+<section id="iframes">
+    <h2>iFrames</h2>
+    <iframe src="https://www.example.com" width="300" height="200"></iframe>
+</section>
+
+<footer>
+    <p>HTML Feature Showcase &copy; 2024</p>
+</footer>
+</body>
+</html>
