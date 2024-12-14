@@ -6,10 +6,13 @@
     <p>{{ firstName }}</p>
   </div>
   <div class="col-3">
-    <p>{{version}}</p>
+    <p>{{ version }}</p>
   </div>
   <div class="col-3">
-    <p>{{currentDate}}</p>
+    <p>{{ currentDate }}</p>
+  </div>
+  <div class="col-3">
+    {{ selectedState }}
   </div>
 </div>
 
@@ -17,7 +20,21 @@
   <div class="col-3">
     <input type="text" [value]="firstName" class="form-control"/>
   </div>
+
+  <div class="col-3">
+    <input type="text" [(ngModel)]="firstName"/>
+  </div>
+
   <div class="col-3">
     <input [type]="inputType"/>
   </div>
+
+  <div class="col-3">
+    <select [(ngModel)]="selectedState">
+      <option value="MH">MH</option>
+      <option value="DEL">DEL</option>
+      <option value="HAR">HAR</option>
+    </select>
+  </div>
+
 </div>
