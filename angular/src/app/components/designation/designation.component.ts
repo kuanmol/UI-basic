@@ -9,6 +9,9 @@ import {ApiResponseModel, IDesignation} from '../../model/interface/role';
   styleUrl: './designation.component.css'
 })
 export class DesignationComponent implements OnInit {
+  designationList: IDesignation[] = [];
+  masterService = inject(MasterService);
+
   ngOnInit(): void {
     this.masterService.getDesignation().subscribe((result: ApiResponseModel) => {
       this.designationList = result.data;
@@ -16,8 +19,5 @@ export class DesignationComponent implements OnInit {
       alert("api error");
     })
   }
-
-  designationList: IDesignation[] = [];
-  masterService = inject(MasterService);
 
 }
