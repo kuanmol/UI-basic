@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
+import {MasterService} from '../../service/master.service';
+import {ApiResponseModel, IDesignation} from '../../model/interface/role';
 
 @Component({
   selector: 'app-designation',
@@ -6,6 +8,16 @@ import { Component } from '@angular/core';
   templateUrl: './designation.component.html',
   styleUrl: './designation.component.css'
 })
-export class DesignationComponent {
+export class DesignationComponent implements OnInit {
+  ngOnInit(): void {
+    this.masterService.getDesignation().subscribe((result: ApiResponseModel) => {
+      this.designationList = result.data;
+    }, error => {
+      alert("api error");
+    })
+  }
+
+  designationList: IDesignation[] = [];
+  masterService = inject(MasterService);
 
 }

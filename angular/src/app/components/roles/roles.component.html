@@ -11,17 +11,26 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-4">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Sr no</th>
+        <th>Role name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let role of roleList; let srno = index">
+        <td>{{ srno + 1 }}</td>
+        <td>{{ role.role }}</td>
+      </tr>
 
+      </tbody>
+    </table>
+  </div>
 
-
-
-
-
-
-
-
-
-
+</div>
 
 
 <!--<p>roles works!</p>-->
