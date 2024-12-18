@@ -4,10 +4,11 @@ import {Client} from '../../model/class/client';
 import {FormsModule} from '@angular/forms';
 import {ClientService} from '../../service/client.service';
 import {ApiResponseModel} from '../../model/interface/role';
+import {iterator} from 'rxjs/internal/symbol/iterator';
 
 @Component({
   selector: 'app-client',
-  imports: [NgForOf, FormsModule, NgForOf,
+  imports: [FormsModule,
   ],
   templateUrl: './client.component.html',
   styleUrl: './client.component.css'
@@ -31,7 +32,13 @@ export class ClientComponent implements OnInit {
 
   onSaveClient() {
     this.clientService.addUpdate(this.clientObj).subscribe((res: ApiResponseModel) => {
-      this.clientList = res.data;
+      if (res.result) {
+        alert("client saved successfully");
+        this.loadClients();
+        this.clientObj = new Client();
+      } else {
+        alert(res.message);
+      }
     })
   }
 }

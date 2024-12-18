@@ -11,15 +11,14 @@ import {environment} from '../../environments/environment';
 })
 export class ClientService {
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getAllClients(): Observable<ApiResponseModel> {
-    return this.http.get<ApiResponseModel>(environment.apiUrl + 'GetAllDesignation');
+    return this.http.get<ApiResponseModel>(environment.apiUrl + 'GetAllClients');
   }
 
   addUpdate(obj: Client): Observable<ApiResponseModel> {
-    return this.http.post<ApiResponseModel>(environment.apiUrl + 'GetAllDesignation', obj);
+    return this.http.post<ApiResponseModel>(environment.apiUrl + 'AddUpdateClient', obj);
   }
 
   deleteClientById(id: number): Observable<ApiResponseModel> {
