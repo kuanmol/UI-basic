@@ -65,7 +65,7 @@
             <input type="text" [(ngModel)]="clientObj.pincode" class="form-control">
           </div>
           <div class="col-6">
-            <label for=" ">address</label>
+            <label for=" ">Address</label>
             <textarea class="form-control" [(ngModel)]="clientObj.address"></textarea>
           </div>
 
@@ -74,11 +74,11 @@
             <input type="text" [(ngModel)]="clientObj.employeeStrength" class="form-control">
           </div>
           <div class="col-6">
-            <label for=" ">gstNo</label>
+            <label for=" ">GstNo</label>
             <input type="text" [(ngModel)]="clientObj.gstNo" class="form-control">
           </div>
           <div class="col-6">
-            <label for=" ">regNo</label>
+            <label for=" ">RegNo</label>
             <input type="text" [(ngModel)]="clientObj.regNo" class="form-control">
           </div>
         </div>
@@ -87,7 +87,7 @@
             <button class="btn btn-secondary">Reset</button>
           </div>
           <div class="col-6">
-            <button class="btn btn-success">Save Client</button>
+            <button class="btn btn-success" (click)="onSaveClient()">Save Client</button>
           </div>
         </div>
       </div>
