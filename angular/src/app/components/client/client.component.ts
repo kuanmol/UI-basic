@@ -41,4 +41,18 @@ export class ClientComponent implements OnInit {
       }
     })
   }
+
+  onDelete(id: number) {
+    const IsDelete = confirm("Are you sure you want to delete this client?");
+    if (IsDelete) {
+      this.clientService.deleteClientById(id).subscribe((res: ApiResponseModel) => {
+        if (res.result) {
+          alert("client deleted successfully");
+          this.loadClients();
+        } else {
+          alert(res.message);
+        }
+      })
+    }
+  }
 }
