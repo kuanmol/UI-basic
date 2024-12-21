@@ -1,10 +1,8 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {NgForOf} from '@angular/common';
 import {Client} from '../../model/class/client';
 import {FormsModule} from '@angular/forms';
 import {ClientService} from '../../service/client.service';
 import {ApiResponseModel} from '../../model/interface/role';
-import {iterator} from 'rxjs/internal/symbol/iterator';
 
 @Component({
   selector: 'app-client',
@@ -56,7 +54,7 @@ export class ClientComponent implements OnInit {
     }
   }
 
-  onEdit(data: Client ) {
-    this.clientObj=data;
+  onEdit(data: Client) {
+    this.clientObj = data;
   }
 }
