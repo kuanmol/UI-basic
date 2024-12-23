@@ -1,5 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ClientService} from '../../service/client.service';
 import {ApiResponseModel, Employee} from '../../model/interface/role';
 import {Client} from '../../model/class/client';
@@ -35,10 +35,20 @@ export class ClientProjectComponent implements OnInit {
     })
   }
 
+  onSaveProject() {
+    const formValue=this.projectForm.value;
+    this.clientSrv.addClientProjectUpdate(formValue).subscribe((res: ApiResponseModel) => {
+      if(res.result){
+        alert("project updated successfully");
+      }else {
+        alert("project not updated successfully");
+      }
+    })
+  }
 
   projectForm: FormGroup = new FormGroup({
     clientProjectId: new FormControl(0),
-    projectName: new FormControl(""),
+    projectName: new FormControl("",[Validators.required,Validators.minLength(4)]),
     startDate: new FormControl(""),
     expectedEndDate: new FormControl(""),
     leadByEmpId: new FormControl(""),

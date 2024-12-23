@@ -36,6 +36,14 @@
             <div class="col-6">
               <label for="">Project Name</label>
               <input type="text" formControlName="projectName" class="form-control">
+              <div class="text-danger">
+                @if (projectForm.controls['projectName'].errors?.['required']) {
+                  <span>this is required</span>
+                }
+                @if (projectForm.controls['projectName'].errors?.['minlength']) {
+                  <span>Need min 4 characters</span>
+                }
+              </div>
             </div>
             <div class="col-6">
               <label for=" ">Start date</label>
@@ -55,7 +63,7 @@
             </div>
             <div class="col-6">
               <label for=" ">Contact Email</label>
-              <input type="text" formControlName="contactPcontactPersonEmailIderson" class="form-control">
+              <input type="text" formControlName="contactPersonEmailId" class="form-control">
             </div>
 
             <div class="col-6">
@@ -64,13 +72,7 @@
             </div>
             <div class="col-6">
               <label for=" ">Project Costing</label>
-              <input type="text" formControlName="totalEmpWorking" class="form-control">
-            </div>
-            <div class="col-6">
-              <label for=" ">Project Costing</label>
-              <select formControlName="projectCost" class="form-control">
-                <option value="">Select Client</option>
-              </select>
+              <input formControlName="projectCost" class="form-control">
             </div>
             <div class="col-12">
               <label for=" ">Project Description</label>
@@ -84,7 +86,7 @@
                   <option [value]="item.clientId">{{ item.companyName }}</option>
                 }
               </select>
-            </div> 
+            </div>
             <div class="col-6">
               <label for=" ">Lead By</label>
               <select formControlName="leadByEmpId" class="form-control">\
@@ -100,7 +102,7 @@
               <button class="btn btn-secondary">Reset</button>
             </div>
             <div class="col-6 text-center">
-              <button class="btn btn-success">Save Project
+              <button class="btn btn-success" (click)="onSaveProject()">Save Project
               </button>
             </div>
           </div>
