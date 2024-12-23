@@ -25,4 +25,8 @@ export class ClientService {
     return this.http.delete<ApiResponseModel>(environment.apiUrl + 'DeleteClientByClientId?clientId=' + id);
   }
 
+  getAllEmployee(): Observable<ApiResponseModel> {
+    return this.http.get<ApiResponseModel>(environment.apiUrl + 'GetAllEmployee');
+  }
+
 }
